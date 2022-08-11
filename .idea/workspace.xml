@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b639190-e3a4-4ae2-93bb-91d4375c0953" name="Changes" comment="" />
+    <list default="true" id="9b639190-e3a4-4ae2-93bb-91d4375c0953" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ConnectDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/ConnectDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Start.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ConnectDatabase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ConnectDatabase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Start.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Start.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,10 +25,16 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2D6JUG3F26C62ZoAfAOqRFICDYM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -32,10 +46,16 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-java-8.0.29.jar" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Start" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -61,5 +81,16 @@
       <updated>1660013616688</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
