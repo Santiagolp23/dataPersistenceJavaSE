@@ -1,3 +1,6 @@
+package dao;
+
+import model.Message;
 import service.ConnectDatabase;
 import java.sql.*;
 

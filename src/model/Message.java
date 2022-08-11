@@ -1,9 +1,8 @@
+package model;
+
 public class Message {
     int id_message;
     String message, messageAuthor, messageDate;
-
-    public Message() {
-    }
 
     public Message(String message, String messageAuthor, String messageDate) {
         this.message = message;
@@ -11,11 +10,13 @@ public class Message {
         this.messageDate = messageDate;
     }
 
-    public int getId_message() {
+    public Message() {}
+
+    public int getMessageID() {
         return id_message;
     }
 
-    public void setId_message(int id_message) {
+    public void setMessageID(int id_message) {
         this.id_message = id_message;
     }
 
