@@ -3,6 +3,7 @@ package dao;
 import model.Message;
 import service.ConnectDatabase;
 import java.sql.*;
+import java.util.ArrayList;
 
 public class DAOMessages {
 
@@ -25,7 +26,31 @@ public class DAOMessages {
         }
     }
 
-    public static void readMessagesDB() {
+    public static ArrayList<Message> readMessagesDB() {
+        ArrayList<Message> allMessages = new ArrayList<>();
+        try (Connection connect = ConnectDatabase.getConnection()){
+            PreparedStatement ps = null;
+            ResultSet rs = null;
+            try {
+                String query = "SELECT * FROM messages";
+                ps = connect.prepareStatement(query);
+                rs = ps.executeQuery();
+
+                while (rs.next()) {
+                    Message currentMessage = new Message();
+                    currentMessage.setMessageID(rs.getInt("message_id"));
+                    currentMessage.setMessage(rs.getString("message"));
+                    currentMessage.setMessageAuthor(rs.getString("message_author"));
+                    allMessages.add(currentMessage);
+                }
+
+            } catch (SQLException ex) {
+                System.out.println(ex);
+            }
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+        return allMessages;
     }
 
     public static void deleteMessageDB(int messageID) {
