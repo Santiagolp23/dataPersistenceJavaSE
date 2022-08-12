@@ -53,6 +53,27 @@ public class DAOMessages {
         return allMessages;
     }
 
+
+    public static void updateMessageDB(Message message) {
+        try (Connection connect = ConnectDatabase.getConnection()){
+            PreparedStatement ps = null;
+            try {
+                String query = "UPDATE messages SET message = ? WHERE messages.message_id = ?";
+                ps = connect.prepareStatement(query);
+                ps.setString(1, message.getMessage());
+                ps.setInt(2, message.getMessageID());
+                ps.executeUpdate();
+                System.out.println("Message updated successfully");
+
+            } catch (SQLException ex) {
+                System.out.println(ex);
+            }
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+    }
+
+
     public static void deleteMessageDB(int messageID) {
         try (Connection connect = ConnectDatabase.getConnection()){
             PreparedStatement ps = null;
@@ -70,10 +91,6 @@ public class DAOMessages {
         } catch (SQLException e) {
             System.out.println(e);
         }
-    }
-
-
-    public static void updateMessageDB(Message message) {
     }
 
 }

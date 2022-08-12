@@ -33,6 +33,16 @@ public class MessagesService {
     }
 
     public static void editMessage() {
+        Message messageToEdit = new Message();
+
+        System.out.println("Please select the message ID you want to edit: ");
+        messageToEdit.setMessageID(Integer.parseInt(scan.nextLine()));
+
+        System.out.println("Please enter the new message: ");
+        messageToEdit.setMessage(scan.nextLine());
+
+        DAOMessages.updateMessageDB(messageToEdit);
+
     }
 
     public static void deleteMessage() {
