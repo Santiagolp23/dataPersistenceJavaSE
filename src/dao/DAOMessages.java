@@ -54,7 +54,24 @@ public class DAOMessages {
     }
 
     public static void deleteMessageDB(int messageID) {
+        try (Connection connect = ConnectDatabase.getConnection()){
+            PreparedStatement ps = null;
+            try {
+                String query = "DELETE FROM messages WHERE messages.message_id = ?";
+                ps = connect.prepareStatement(query);
+                ps.setInt(1, messageID);
+                ps.executeUpdate();
+                System.out.println("Message has been deleted");
+
+            } catch (SQLException ex) {
+                System.out.println(ex);
+                System.out.println("Message couldn't be deleted");
+            }
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
     }
+
 
     public static void updateMessageDB(Message message) {
     }

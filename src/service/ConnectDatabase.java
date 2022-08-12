@@ -10,8 +10,8 @@ public class ConnectDatabase {
     private ConnectDatabase() {
     }
 
-    public static Connection getConnection() {
-        if (myConnection == null) {
+    public static Connection getConnection() throws SQLException {
+        if (myConnection == null || myConnection.isClosed()) {
             try {
                 myConnection = DriverManager.getConnection("jdbc:mysql://localhost:3306/app_messages", "root", "");
             } catch (SQLException e) {

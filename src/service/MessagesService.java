@@ -7,8 +7,9 @@ import model.Message;
 import dao.DAOMessages;
 
 public class MessagesService {
+    static Scanner scan = new Scanner(System.in);
+
     public static void createMessage() {
-        Scanner scan = new Scanner(System.in);
         System.out.println("Write your message: ");
         String message = scan.nextLine();
         System.out.println("Your name: ");
@@ -29,13 +30,15 @@ public class MessagesService {
             System.out.println("Message: " + currentMessage.getMessage());
             System.out.println("Author: " + currentMessage.getMessageAuthor());
         }
-        
     }
 
     public static void editMessage() {
     }
 
     public static void deleteMessage() {
+        System.out.println("Enter the message ID to delete: ");
+        int messageID = Integer.parseInt(scan.nextLine());
+        DAOMessages.deleteMessageDB(messageID);
     }
 
 }
