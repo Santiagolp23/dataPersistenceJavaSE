@@ -6,10 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="9b639190-e3a4-4ae2-93bb-91d4375c0953" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dao/DAOMessages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/DAOMessages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Start.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/ConnectDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/ConnectDatabase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/MessagesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/MessagesService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/DAOMessages.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/DAOMessages.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/MessagesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/MessagesService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

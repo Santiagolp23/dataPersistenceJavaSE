@@ -2,16 +2,20 @@ package dao;
 
 import model.Message;
 import service.ConnectDatabase;
-import java.sql.*;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class DAOMessages {
 
     public static void createMessageDB(Message message) {
-        try (Connection connect = ConnectDatabase.getConnection()){
+        try (Connection connect = ConnectDatabase.getConnection()) {
             PreparedStatement ps = null;
             try {
-                String query= "INSERT INTO `messages` (`message`, `message_author`) VALUES (?,?)";
+                String query = "INSERT INTO `messages` (`message`, `message_author`) VALUES (?,?)";
                 ps = connect.prepareStatement(query);
                 ps.setString(1, message.getMessage());
                 ps.setString(2, message.getMessageAuthor());
@@ -28,7 +32,7 @@ public class DAOMessages {
 
     public static ArrayList<Message> readMessagesDB() {
         ArrayList<Message> allMessages = new ArrayList<>();
-        try (Connection connect = ConnectDatabase.getConnection()){
+        try (Connection connect = ConnectDatabase.getConnection()) {
             PreparedStatement ps = null;
             ResultSet rs = null;
             try {
@@ -55,7 +59,7 @@ public class DAOMessages {
 
 
     public static void updateMessageDB(Message message) {
-        try (Connection connect = ConnectDatabase.getConnection()){
+        try (Connection connect = ConnectDatabase.getConnection()) {
             PreparedStatement ps = null;
             try {
                 String query = "UPDATE messages SET message = ? WHERE messages.message_id = ?";
@@ -75,7 +79,7 @@ public class DAOMessages {
 
 
     public static void deleteMessageDB(int messageID) {
-        try (Connection connect = ConnectDatabase.getConnection()){
+        try (Connection connect = ConnectDatabase.getConnection()) {
             PreparedStatement ps = null;
             try {
                 String query = "DELETE FROM messages WHERE messages.message_id = ?";

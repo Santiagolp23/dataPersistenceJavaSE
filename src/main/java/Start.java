@@ -1,13 +1,12 @@
-import java.sql.Connection;
+import service.MessagesService;
+
 import java.util.Scanner;
-import service.*;
-import dao.*;
 
 public class Start {
     public static void main(String[] args) {
         int option = 0;
         Scanner scan = new Scanner(System.in);
-        do{
+        do {
             System.out.println("--------------");
             System.out.println("Messages App");
             System.out.println("1. Create message");
@@ -37,7 +36,7 @@ public class Start {
                     break;
             }
 
-        } while (option!=5);
+        } while (option != 5);
 
     }
 }

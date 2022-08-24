@@ -10,7 +10,8 @@ public class Message {
         this.messageDate = messageDate;
     }
 
-    public Message() {}
+    public Message() {
+    }
 
     public int getMessageID() {
         return id_message;
